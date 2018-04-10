@@ -31,7 +31,7 @@ public class LoginPage {
         TestUtils.click(signInBtn, driver);
     }
 
-    /**
+   
      * @param email Enter valid email address.
      */
     public void enterEmailAddress(String email) {
