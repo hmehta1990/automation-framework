@@ -21,6 +21,9 @@ public class LoginPage {
         this.driver = driver;
     }
 
+    /**
+     * Its for login
+     */
     public void loginToApplication() {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -28,10 +31,13 @@ public class LoginPage {
         TestUtils.click(signInBtn, driver);
     }
 
+    /**
+     * @param email Enter valid email address
+     */
     public void enterEmailAddress(String email) {
         TestUtils.sendKeys(email, driver, this.emailAddressTextBox);
     }
-
+//
     public void validateSignInPage(String header) {
         String h1 = driver.findElement(this.header1).getText();
         Assert.assertEquals(header, h1);
