@@ -32,12 +32,15 @@ public class LoginPage {
     }
 
     /**
-     * @param email Enter valid email address
+     * @param email Enter valid email address.
      */
     public void enterEmailAddress(String email) {
         TestUtils.sendKeys(email, driver, this.emailAddressTextBox);
     }
-//
+
+    public void validateUserName() {
+    }
+
     public void validateSignInPage(String header) {
         String h1 = driver.findElement(this.header1).getText();
         Assert.assertEquals(header, h1);
