@@ -3,9 +3,6 @@ package com.automation.framework.atdd.ui.utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TestUtils {
 
@@ -19,7 +16,17 @@ public class TestUtils {
     }
 
     private static void explicitWait(By by, WebDriver driver) {
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+        // WebDriverWait wait = new WebDriverWait(driver, 30);
+        // wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
+
+    public static void sendKeys(String keys, WebDriver driver, By by) {
+        explicitWait(by, driver);
+        driver.findElement(by).sendKeys(keys);
+    }
+
+    public static void isDisplayed() {
+
+    }
+
 }
