@@ -10,3 +10,4 @@ Feature: validate login page
     And User click on the Continue button
     And User enter password "123"
     And User click Sign in button
+djkfhafkhljfhkjsd
