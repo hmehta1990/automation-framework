@@ -23,7 +23,7 @@ public class LoginPage {
 
     /**
      * Its for login
-     */
+ 
     public void loginToApplication() {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
